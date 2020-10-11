@@ -8,10 +8,18 @@ const Table = (props) => {
     })
   }
 
+  const priceChange = () => {
+    if (props.price >= 0) {
+      return props.price
+    } else {
+      return 0
+    }
+  }
+
   return (
     <Fragment>
       <h1 className="remaining">
-        You have: ${ /* Give me how much money I have left */ } remaining!
+        You have: ${ priceChange() } remaining!
       </h1>
       <div className="table">
         <div className="stack">
@@ -21,7 +29,7 @@ const Table = (props) => {
                and renders an empty plate
                for every element in the array
             */
-            renderPlates([])
+            renderPlates(props.eatenSushi)
           }
         </div>
       </div>
