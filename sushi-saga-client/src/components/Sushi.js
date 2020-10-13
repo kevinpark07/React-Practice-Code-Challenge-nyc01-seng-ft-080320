@@ -10,7 +10,7 @@ sushiHandle = () => {
   let currentBalance = this.props.balance - this.props.sushi.price
   this.props.clickHandler(this.props.sushi);
   this.setState({
-    eaten: currentBalance >= this.props.sushi.price ? true : false
+    eaten: this.props.sushi.price >= currentBalance ? false : true
   })
 }
 

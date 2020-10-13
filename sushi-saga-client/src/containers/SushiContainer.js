@@ -5,9 +5,8 @@ import Sushi from '../components/Sushi';
 
 class SushiContainer extends React.Component {
   
-  
   renderSushi = () => {
-    return this.props.sushiArray.slice(0, 4).map(sushi => <Sushi key={sushi.id} balance={this.props.balance} clickHandler={this.props.clickHandler} sushi={sushi} />)
+    return this.props.sushiArray.map(sushi => <Sushi key={sushi.id} balance={this.props.balance} clickHandler={this.props.clickHandler} sushi={sushi} />)
   }
 
 
